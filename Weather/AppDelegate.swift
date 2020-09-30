@@ -14,6 +14,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let url = URL(string: "https://api.weatherapi.com/v1/current.json?key=47096294b48b43ee896155647203009&q=Norcross")!
+        let networkProcessor = NetworkProcessor(url: url)
+                
+        networkProcessor.downloadJSONFromURL
+        { (jsonDictionary) in
+            print(jsonDictionary)
+        }
+        
         return true
     }
 
