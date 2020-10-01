@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
         networkProcessor.downloadJSONFromURL
         { (jsonDictionary) in
-            print(jsonDictionary)
+            print(jsonDictionary!)
         }
         
         return true
