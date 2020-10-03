@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A5777312528D46D0018E182 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5777302528D46D0018E182 /* WeatherService.swift */; };
 		8A8EC1F3252431F200FF7BE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8EC1F2252431F200FF7BE6 /* AppDelegate.swift */; };
 		8A8EC1F5252431F200FF7BE6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8EC1F4252431F200FF7BE6 /* SceneDelegate.swift */; };
 		8A8EC1F7252431F200FF7BE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8EC1F6252431F200FF7BE6 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A5777302528D46D0018E182 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		8A8EC1EF252431F200FF7BE6 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A8EC1F2252431F200FF7BE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A8EC1F4252431F200FF7BE6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,11 +63,11 @@
 				8A8EC1F2252431F200FF7BE6 /* AppDelegate.swift */,
 				8A8EC1F4252431F200FF7BE6 /* SceneDelegate.swift */,
 				8A8EC1F6252431F200FF7BE6 /* ViewController.swift */,
+				8A8EC20A2524546400FF7BE6 /* Model */,
 				8A8EC1F8252431F200FF7BE6 /* Main.storyboard */,
 				8A8EC1FB252431F300FF7BE6 /* Assets.xcassets */,
 				8A8EC1FD252431F300FF7BE6 /* LaunchScreen.storyboard */,
 				8A8EC200252431F300FF7BE6 /* Info.plist */,
-				8A8EC20A2524546400FF7BE6 /* Model */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				8A8EC2072524545B00FF7BE6 /* NetworkProcessor.swift */,
+				8A5777302528D46D0018E182 /* WeatherService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 				8A8EC1F7252431F200FF7BE6 /* ViewController.swift in Sources */,
 				8A8EC1F3252431F200FF7BE6 /* AppDelegate.swift in Sources */,
 				8A8EC1F5252431F200FF7BE6 /* SceneDelegate.swift in Sources */,
+				8A5777312528D46D0018E182 /* WeatherService.swift in Sources */,
 				8A8EC2082524545B00FF7BE6 /* NetworkProcessor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

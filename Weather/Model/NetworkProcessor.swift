@@ -35,12 +35,11 @@ class NetworkProcessor
                             if let data = data
                             {
                                 //print(data) // prints data size
+                                
                                 do
                                 {
                                     let jsonDictionary = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
-                                    
                                     completion(jsonDictionary as? [String : Any])
-                                    
                                 }
                                 catch let error as NSError
                                 {
