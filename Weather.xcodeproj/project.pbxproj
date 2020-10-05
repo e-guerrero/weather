@@ -15,6 +15,7 @@
 		8A8EC1FC252431F300FF7BE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A8EC1FB252431F300FF7BE6 /* Assets.xcassets */; };
 		8A8EC1FF252431F300FF7BE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A8EC1FD252431F300FF7BE6 /* LaunchScreen.storyboard */; };
 		8A8EC2082524545B00FF7BE6 /* NetworkProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8EC2072524545B00FF7BE6 /* NetworkProcessor.swift */; };
+		8AFE18E0252984AF00B9AC6F /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFE18DF252984AF00B9AC6F /* CurrentWeather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		8A8EC1FE252431F300FF7BE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A8EC200252431F300FF7BE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A8EC2072524545B00FF7BE6 /* NetworkProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProcessor.swift; sourceTree = "<group>"; };
+		8AFE18DF252984AF00B9AC6F /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			children = (
 				8A8EC2072524545B00FF7BE6 /* NetworkProcessor.swift */,
 				8A5777302528D46D0018E182 /* WeatherService.swift */,
+				8AFE18DF252984AF00B9AC6F /* CurrentWeather.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 				8A8EC1F3252431F200FF7BE6 /* AppDelegate.swift in Sources */,
 				8A8EC1F5252431F200FF7BE6 /* SceneDelegate.swift in Sources */,
 				8A5777312528D46D0018E182 /* WeatherService.swift in Sources */,
+				8AFE18E0252984AF00B9AC6F /* CurrentWeather.swift in Sources */,
 				8A8EC2082524545B00FF7BE6 /* NetworkProcessor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
