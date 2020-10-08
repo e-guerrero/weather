@@ -12,16 +12,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-        let weatherService = WeatherService(APIKey: "47096294b48b43ee896155647203009")
-        weatherService.getCurrentWeather(cityOrTown: "Norcross") { (currentWeather) in
-            print(currentWeather!)
-            print("temp c: \(currentWeather!.temp_c!)")
-            print("temp f: \(currentWeather!.temp_f!)")
-            print("humidity: \(currentWeather!.humidity!)")
-            print("precipitation (inch): \(currentWeather!.precipInches!)")
-        }
-        
         return true
     }
 
