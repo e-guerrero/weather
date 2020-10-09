@@ -22,6 +22,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="City, State" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UvP-As-jD8">
+                                <rect key="frame" x="57" y="337.5" width="300" height="36.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="628-6h-97I"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -29,10 +37,13 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oRg-Aw-FEQ" secondAttribute="trailing" constant="20" id="9fS-qW-SSS"/>
                             <constraint firstItem="oRg-Aw-FEQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DAh-6Q-SUu"/>
                             <constraint firstItem="oRg-Aw-FEQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="i7m-ps-GZU"/>
+                            <constraint firstItem="oRg-Aw-FEQ" firstAttribute="top" secondItem="UvP-As-jD8" secondAttribute="bottom" constant="34.5" id="ntn-Hm-HjT"/>
                             <constraint firstItem="oRg-Aw-FEQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qmW-ON-eR8"/>
+                            <constraint firstItem="UvP-As-jD8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vqV-a9-du9"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="locationTextField" destination="UvP-As-jD8" id="f5a-kW-fdt"/>
                         <outlet property="temp_f_Label" destination="oRg-Aw-FEQ" id="65l-Le-jeG"/>
                     </connections>
                 </viewController>

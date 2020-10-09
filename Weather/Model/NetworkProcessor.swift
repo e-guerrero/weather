@@ -35,7 +35,6 @@ class NetworkProcessor
                             if let data = data
                             {
                                 //print(data) // prints data size
-                                
                                 do
                                 {
                                     let jsonDictionary = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
@@ -48,6 +47,7 @@ class NetworkProcessor
                             }
                         default:
                             print("HTTP Response Code: \(httpResponse.statusCode)")
+                            completion(nil)
                     }
                 }
             }

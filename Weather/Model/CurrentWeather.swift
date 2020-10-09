@@ -30,7 +30,12 @@ class CurrentWeather
             temp_f = nil
         }
         
-        humidity = weatherDictionary["humidity"] as? Int
+        if let humidityDouble = weatherDictionary["humidity"] as? Double
+        {
+            humidity = Int(humidityDouble)
+        } else {
+            humidity = nil
+        }
         
         if let precipInchesDouble = weatherDictionary["precip_in"] as? Double
         {
@@ -39,5 +44,4 @@ class CurrentWeather
             precipInches = nil
         }
     }
-    
 }
