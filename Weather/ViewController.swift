@@ -30,8 +30,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         displayCondition(textField)
     }
     
-    func textFieldShouldClear(_ textField: UITextField) -> Bool {
-        return true
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.text = ""
     }
     
     func displayLocation(_ textField: UITextField) -> Void
