@@ -123,7 +123,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
             }
             else
             {
-                print("false")
+                DispatchQueue.main.async {
+                    self.conditionImageView.image = nil
+                }
             }
         }
     }
