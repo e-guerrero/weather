@@ -17,39 +17,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hG3-Sp-VLO">
-                                <rect key="frame" x="20" y="79" width="374" height="278"/>
+                                <rect key="frame" x="20" y="114" width="374" height="274.5"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="° F" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oRg-Aw-FEQ">
+                                <rect key="frame" x="169.5" y="408.5" width="75.5" height="79"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="66"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Location" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UvP-As-jD8">
-                                <rect key="frame" x="57" y="357" width="300" height="36.5"/>
+                                <rect key="frame" x="57" y="527.5" width="300" height="36.5"/>
                                 <color key="tintColor" systemColor="systemGreenColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36.5" id="61r-Ce-OCL"/>
                                     <constraint firstAttribute="width" constant="300" id="628-6h-97I"/>
                                 </constraints>
-                                <color key="textColor" systemColor="systemGreenColor"/>
+                                <color key="textColor" systemColor="systemIndigoColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="° F" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oRg-Aw-FEQ">
-                                <rect key="frame" x="20" y="408.5" width="374" height="79"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="66"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.20376411080000001" green="0.20772534610000001" blue="0.21601569649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oRg-Aw-FEQ" secondAttribute="trailing" constant="20" id="9fS-qW-SSS"/>
-                            <constraint firstItem="oRg-Aw-FEQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DAh-6Q-SUu"/>
-                            <constraint firstItem="hG3-Sp-VLO" firstAttribute="leading" secondItem="oRg-Aw-FEQ" secondAttribute="leading" id="R2G-bG-URb"/>
-                            <constraint firstItem="hG3-Sp-VLO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="bej-HS-4lg"/>
-                            <constraint firstItem="oRg-Aw-FEQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="i7m-ps-GZU"/>
-                            <constraint firstItem="oRg-Aw-FEQ" firstAttribute="top" secondItem="UvP-As-jD8" secondAttribute="bottom" constant="15" id="ntn-Hm-HjT"/>
-                            <constraint firstItem="UvP-As-jD8" firstAttribute="top" secondItem="hG3-Sp-VLO" secondAttribute="bottom" id="oZf-k4-bDp"/>
-                            <constraint firstItem="oRg-Aw-FEQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qmW-ON-eR8"/>
-                            <constraint firstItem="UvP-As-jD8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vqV-a9-du9"/>
-                            <constraint firstItem="hG3-Sp-VLO" firstAttribute="trailing" secondItem="oRg-Aw-FEQ" secondAttribute="trailing" id="zkO-RH-XAj"/>
+                            <constraint firstItem="UvP-As-jD8" firstAttribute="top" secondItem="oRg-Aw-FEQ" secondAttribute="bottom" constant="40" id="2yi-K5-a2j"/>
+                            <constraint firstItem="oRg-Aw-FEQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5Dz-eC-pPV"/>
+                            <constraint firstItem="oRg-Aw-FEQ" firstAttribute="top" secondItem="hG3-Sp-VLO" secondAttribute="bottom" constant="20" id="I9z-qL-bHw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hG3-Sp-VLO" secondAttribute="trailing" constant="20" id="LKg-2r-ltB"/>
+                            <constraint firstItem="hG3-Sp-VLO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ns4-dj-zbi"/>
+                            <constraint firstItem="hG3-Sp-VLO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="gZN-Ql-bVc"/>
+                            <constraint firstItem="oRg-Aw-FEQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lvA-v7-dXV"/>
+                            <constraint firstItem="UvP-As-jD8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s6Y-3d-MhN"/>
                         </constraints>
                     </view>
                     <connections>
@@ -66,6 +64,9 @@
     <resources>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

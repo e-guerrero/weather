@@ -19,19 +19,32 @@ class ViewController: UIViewController, UITextFieldDelegate {
         locationTextField.delegate = self
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.text = ""
+        moveTextField(textField, moveDistance: -100, up: true)
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         displayLocation(textField)
         displayTemp(textField)
         displayCondition(textField)
+        moveTextField(textField, moveDistance: -100, up: false)
     }
     
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        textField.text = ""
+    func moveTextField(_ textField: UITextField, moveDistance: Int, up: Bool) {
+        let moveDuration = 0.3
+        let movement: CGFloat = CGFloat(up ? moveDistance : -moveDistance)
+        
+        UIView.beginAnimations("animateTextField", context: nil)
+        UIView.setAnimationBeginsFromCurrentState(true)
+        UIView.setAnimationDuration(moveDuration)
+        self.view.frame = self.view.frame.offsetBy(dx: 0, dy: movement)
+        UIView.commitAnimations()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     func displayLocation(_ textField: UITextField) -> Void
