@@ -12,16 +12,16 @@ class Location
     let cityTown: String?
     let state: String?
     
-    init(locationDictionary: [String : Any])
+    init(dictionary: [String : Any])
     {
-        if let cityTown = locationDictionary["name"] as? String
+        if let cityTown = dictionary["name"] as? String
         {
             self.cityTown = cityTown
         } else {
             self.cityTown = nil
         }
         
-        if let state = locationDictionary["region"] as? String
+        if let state = dictionary["region"] as? String
         {
             self.state = state
         } else {

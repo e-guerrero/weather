@@ -16,45 +16,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="° F" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oRg-Aw-FEQ">
-                                <rect key="frame" x="20" y="408.5" width="374" height="79"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="66"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="City, State" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UvP-As-jD8">
-                                <rect key="frame" x="57" y="337.5" width="300" height="36.5"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hG3-Sp-VLO">
+                                <rect key="frame" x="20" y="79" width="374" height="278"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Location" placeholder="City, State" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UvP-As-jD8">
+                                <rect key="frame" x="57" y="357" width="300" height="36.5"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="36.5" id="61r-Ce-OCL"/>
                                     <constraint firstAttribute="width" constant="300" id="628-6h-97I"/>
                                 </constraints>
+                                <color key="textColor" systemColor="systemGreenColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="° F" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oRg-Aw-FEQ">
+                                <rect key="frame" x="20" y="408.5" width="374" height="79"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="66"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.20376411080000001" green="0.20772534610000001" blue="0.21601569649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oRg-Aw-FEQ" secondAttribute="trailing" constant="20" id="9fS-qW-SSS"/>
                             <constraint firstItem="oRg-Aw-FEQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DAh-6Q-SUu"/>
+                            <constraint firstItem="hG3-Sp-VLO" firstAttribute="leading" secondItem="oRg-Aw-FEQ" secondAttribute="leading" id="R2G-bG-URb"/>
+                            <constraint firstItem="hG3-Sp-VLO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="bej-HS-4lg"/>
                             <constraint firstItem="oRg-Aw-FEQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="i7m-ps-GZU"/>
-                            <constraint firstItem="oRg-Aw-FEQ" firstAttribute="top" secondItem="UvP-As-jD8" secondAttribute="bottom" constant="34.5" id="ntn-Hm-HjT"/>
+                            <constraint firstItem="oRg-Aw-FEQ" firstAttribute="top" secondItem="UvP-As-jD8" secondAttribute="bottom" constant="15" id="ntn-Hm-HjT"/>
+                            <constraint firstItem="UvP-As-jD8" firstAttribute="top" secondItem="hG3-Sp-VLO" secondAttribute="bottom" id="oZf-k4-bDp"/>
                             <constraint firstItem="oRg-Aw-FEQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qmW-ON-eR8"/>
                             <constraint firstItem="UvP-As-jD8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vqV-a9-du9"/>
+                            <constraint firstItem="hG3-Sp-VLO" firstAttribute="trailing" secondItem="oRg-Aw-FEQ" secondAttribute="trailing" id="zkO-RH-XAj"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="conditionImageView" destination="hG3-Sp-VLO" id="KxS-Dd-9Au"/>
                         <outlet property="locationTextField" destination="UvP-As-jD8" id="f5a-kW-fdt"/>
                         <outlet property="temp_f_Label" destination="oRg-Aw-FEQ" id="65l-Le-jeG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-197" y="55"/>
+            <point key="canvasLocation" x="-197.10144927536234" y="54.910714285714285"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

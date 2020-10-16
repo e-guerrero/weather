@@ -11,7 +11,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var temp_f_Label: UILabel!
     @IBOutlet weak var locationTextField: UITextField!
-    let weatherService = WeatherService(APIKey: "47096294b48b43ee896155647203009")
+    @IBOutlet weak var conditionImageView: UIImageView!
+    let weatherService = WeatherService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         displayLocation(textField)
         displayTemp(textField)
+        displayCondition(textField)
+    }
+    
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        return true
     }
     
     func displayLocation(_ textField: UITextField) -> Void
@@ -52,10 +58,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
             }
             else
             {
-                DispatchQueue.main.async {
+                DispatchQueue.main.async
+                {
                     self.locationTextField.text = "Not Found"
                 }
-               
             }
         }
     }
@@ -88,8 +94,44 @@ class ViewController: UIViewController, UITextFieldDelegate {
             }
         }
     }
+    
+    func displayCondition(_ textField: UITextField) -> Void
+    {
+        self.weatherService.getCondition(textField.text!) { (condition) in
+            if let condition = condition
+            {
+                DispatchQueue.main.async
+                {
+                    if let icon = URL(string: "https:\(condition.icon!)")
+                    {
+                        self.conditionImageView.load(url: icon)
+                    }
+                }
+            }
+            else
+            {
+                print("false")
+            }
+        }
+    }
 }
     
+extension UIImageView
+{
+    func load(url: URL) {
+        DispatchQueue.global().async { [weak self] in
+            if let data = try? Data(contentsOf: url)
+            {
+                if let image = UIImage(data: data)
+                {
+                    DispatchQueue.main.async {
+                        self?.image = image
+                    }
+                }
+            }
+        }
+    }
+}
 
     
     

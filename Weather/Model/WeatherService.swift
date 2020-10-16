@@ -13,9 +13,9 @@ class WeatherService
     let currentWeatherBaseURL: URL?
     var networkProcessor: NetworkProcessor?
     
-    init(APIKey: String) {
-        self.weatherAPIKey = APIKey
-        self.currentWeatherBaseURL = URL(string: "https://api.weatherapi.com/v1/current.json?key=\(APIKey)")
+    init() {
+        self.weatherAPIKey = "47096294b48b43ee896155647203009"
+        self.currentWeatherBaseURL = URL(string: "https://api.weatherapi.com/v1/current.json?key=\(self.weatherAPIKey)")
     }
     
     func setupNetworkProcessor(request networkRequest: String)
@@ -36,7 +36,7 @@ class WeatherService
             if let weatherLocationDictionary = jsonDictionary?["location"] as? [String : Any]
             {
                 // parse JSON into model object
-                let location = Location(locationDictionary: weatherLocationDictionary)
+                let location = Location(dictionary: weatherLocationDictionary)
                 completion(location)
             } else {
                 completion(nil)
@@ -51,11 +51,32 @@ class WeatherService
             if let currentWeatherDictionary = jsonDictionary?["current"] as? [String : Any]
             {
                 // parse JSON into model object
-                let currentWeather = CurrentWeather(weatherDictionary: currentWeatherDictionary)
+                // print(currentWeatherDictionary)
+                let currentWeather = CurrentWeather(dictionary: currentWeatherDictionary)
                 completion(currentWeather)
             } else {
                 completion(nil)
             }
         })
     }
+    
+    func getCondition(_ location: String, completion: @escaping (Condition?) -> Void)
+    {
+        setupNetworkProcessor(request: location)
+        networkProcessor!.downloadJSONFromURL({  (jsonDictionary) in
+            if let currentDictionary = jsonDictionary?["current"] as? [String : Any]
+            {
+                // parse JSON into model object
+                if let conditionDictionary = currentDictionary["condition"] as? [String : Any]
+                {
+                    let condition = Condition(dictionary: conditionDictionary)
+                    completion(condition)
+                }
+                
+            } else {
+                completion(nil)
+            }
+        })
+    }
+    
 }

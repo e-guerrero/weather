@@ -14,30 +14,30 @@ class CurrentWeather
     let humidity: Int?
     let precipInches: Int?
     
-    init(weatherDictionary: [String : Any])
+    init(dictionary: [String : Any])
     {
-        if let temp_c_Double = weatherDictionary["temp_c"] as? Double
+        if let temp_c_Double = dictionary["temp_c"] as? Double
         {
             temp_c = Int(temp_c_Double)
         } else {
             temp_c = nil
         }
         
-        if let temp_f_Double = weatherDictionary["temp_f"] as? Double
+        if let temp_f_Double = dictionary["temp_f"] as? Double
         {
             temp_f = Int(temp_f_Double)
         } else {
             temp_f = nil
         }
         
-        if let humidityDouble = weatherDictionary["humidity"] as? Double
+        if let humidityDouble = dictionary["humidity"] as? Double
         {
             humidity = Int(humidityDouble)
         } else {
             humidity = nil
         }
         
-        if let precipInchesDouble = weatherDictionary["precip_in"] as? Double
+        if let precipInchesDouble = dictionary["precip_in"] as? Double
         {
             precipInches = Int(precipInchesDouble)
         } else {
